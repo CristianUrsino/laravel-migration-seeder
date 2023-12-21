@@ -15,4 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
+Route::get('/train',[App\Http\Controllers\TrainController::class, 'index'])->name('trains.index');
